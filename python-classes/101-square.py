@@ -78,10 +78,10 @@ class Square:
              value (tuple): The position of the square
         '''
         if (
-                isinstance(value, tuple)
-                and len(value) == 2
-                and all(map(lambda i: (isinstance(i, int)
-                                       and i >= 0), value))
+                isinstance(value, tuple) and
+                len(value) == 2 and
+                all(map(lambda i: (isinstance(i, int) and
+                                   i >= 0), value))
         ):
             self.__position = value
         else:
