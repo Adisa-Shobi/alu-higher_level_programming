@@ -60,9 +60,9 @@ class Square:
              value (tuple): The position of the square
         '''
         if (
-                isinstance(value, tuple)
-                and len(value) == 2
-                and all(
+                isinstance(value, tuple) and
+                len(value) == 2 and
+                all(
                     map(
                         lambda i:
                         (
