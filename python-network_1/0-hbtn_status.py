@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 '''a Python script that fetches
  https://alu-intranet.hbtn.io/status using urllib
-'''
+print information gotten from request'''
 import urllib.request
 
 if __name__ == "__main__":
