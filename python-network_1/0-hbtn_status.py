@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-'''a Python script that fetches
-https://alx-intranet.hbtn.io/status using urllib
+'''
+a Python script that fetches https://alu-intranet.hbtn.io/status using urllib
 '''
 import urllib.request
 
 if __name__ == "__main__":
-    url = 'https://alx-intranet.hbtn.io/status'
+    url = 'https://alu-intranet.hbtn.io/status'
     request = urllib.request.Request(url)
     with urllib.request.urlopen(request) as response:
         data = response.read()
