@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-"""a Python script that fetches using urllib print information gotten
- from request:
+'''a Python script that fetches https://alu-intranet.hbtn.io/status it prints
+ the results formatted by.
 Format:
  - type: <type>
- - content: <content>
- - utf8 content: <utf8 content>
-"""
+'''
 import urllib.request
 
 if __name__ == "__main__":
