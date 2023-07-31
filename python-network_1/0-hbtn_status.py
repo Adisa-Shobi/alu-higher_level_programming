@@ -1,8 +1,14 @@
 #!/usr/bin/python3
-'''a Python script that fetches https://alu-intranet.hbtn.io/status it prints
- the results formatted by.
-Format:
- - type: <type>
+'''This script fetches the status information from the URL
+ 'https://alu-intranet.hbtn.io/status' and prints the results in a formatted way.
+
+Dependencies:
+- requests library (install using 'pip install requests')
+
+Usage:
+python fetch_status.py
+
+Example Output:
 '''
 import urllib.request
 
