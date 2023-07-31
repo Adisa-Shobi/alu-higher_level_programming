@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""a Python script that fetches using urllib
-print information gotten from request:
+"""a Python script that fetches using urllib print information gotten
+ from request:
 Format:
  - type: <type>
  - content: <content>
