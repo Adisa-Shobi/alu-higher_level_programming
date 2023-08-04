@@ -1,17 +1,21 @@
 #!/usr/bin/python3
-'''Uses github api to print last ten commits to given repo by given user
-'''
+"""
+Python script that shows the last 10 commits of a repository
+in GitHub
+"""
+from requests import get, auth
 import sys
-import requests
+
 
 if __name__ == "__main__":
-    repo = sys.argv[1]
-    username = sys.argv[2]
-    headers = {'accept': 'application/vnd.github+json'}
-    data = {'per_page': 10, 'page': 1}
-    url = f"https://api.github.com/repos/{username}/{repo}/commits"
-    response = requests.get(url, headers=headers, params=data)
-    json_data = response.json()
-    for entry in json_data:
-        print(f"{entry.get('sha')}: \
-{entry.get('commit').get('author').get('name')}")
+    try:
+        repo = sys.argv[1]
+        owner = sys.argv[2]
+        url = 'https://api.github.com/repos/{}/{}/commits'.format(owner, repo)
+        r = get(url)
+        json_o = r.json()
+        for i in range(0, 10):
+            print("{}: {}".format(json_o[i].get('sha'), json_o[i].get('commit')
+                                  .get('author').get('name')))
+    except:
+        pass
