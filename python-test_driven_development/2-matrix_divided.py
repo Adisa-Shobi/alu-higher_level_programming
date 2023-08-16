@@ -16,11 +16,11 @@ def matrix_divided(matrix, div):
     Return:
        A matrix with all elemants divided and rounded to two places
     '''
-    if not (isinstance(matrix, list)
-            and all(map(lambda x: isinstance(x, list), matrix))
-            and all(map(lambda x: all(map(
-                lambda y: isinstance(y, (int, float)), x)), matrix))
-            and matrix != []):
+    if not (isinstance(matrix, list) and
+            all(map(lambda x: isinstance(x, list), matrix)) and
+            all(map(lambda x: all(map(
+                lambda y: isinstance(y, (int, float)), x)), matrix)) and
+            matrix != []):
         raise TypeError("matrix must be a matrix"
                         " (list of lists) of integers/floats")
     if not (all(map(lambda x: (len(matrix[0]) == len(x)),
