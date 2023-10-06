@@ -12,9 +12,11 @@ request.get(url, (err, resp, body) => {
   }
   body = JSON.parse(body);
   body.results.forEach((film, index) => {
-    if (film.characters.includes(charUrl)) {
-      count++;
-    }
+    film.characters.forEach((character, index) => {
+      if (character === charUrl) {
+        count++;
+      }
+    });
   });
   console.log(count);
 });
